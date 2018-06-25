@@ -33,6 +33,18 @@ public class UserMapperTest {
 			System.out.println(user2);
 		}
 	}
+	@Test
+	public void test2(){
+		ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+		UserMapper mapper = (UserMapper) ac.getBean("userMapper");
+		UserExample example = new UserExample();
+		example.createCriteria().andSexEqualTo("1").andUsernameLike("%陈%");
+		List<User> list = mapper.selectByExample(example );
+		for (User user2 : list) {
+			
+			System.out.println(user2);
+		}
+	}
 	
 
 }
