@@ -42,6 +42,7 @@ public class UserMapperTest {
 		List<User> list2 = mapper.selectByExample(example );
 		for (User user2 : list2) {
 			
+			System.out.println("hehahha");
 			System.out.println(user2);
 		}
 	}
