@@ -39,8 +39,8 @@ public class UserMapperTest {
 		UserMapper mapper = (UserMapper) ac.getBean("userMapper");
 		UserExample example = new UserExample();
 		example.createCriteria().andSexEqualTo("1").andUsernameLike("%陈%");
-		List<User> list = mapper.selectByExample(example );
-		for (User user2 : list) {
+		List<User> list2 = mapper.selectByExample(example );
+		for (User user2 : list2) {
 			
 			System.out.println(user2);
 		}
